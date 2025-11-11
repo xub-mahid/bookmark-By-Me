@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark Manager</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body style="background-color:#cbdddd;" class=" flex items-center justify-center h-screen">
+      <!-- Login Card -->
+  <div class="bg-white shadow-md rounded-xl p-8 w-96 text-gray-800 ">
+    
+    <!-- Header -->
+    <div class="flex items-center mb-6">
+      <div class="bg-emerald-900 text-white p-2 rounded-md">
+        <!-- Bookmark Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" 
+             class="h-5 w-5" fill="none" 
+             viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                d="M5 5v14l7-5 7 5V5a2 2 0 00-2-2H7a2 2 0 00-2 2z" />
+        </svg>
+      </div>
+      <h1 class="text-lg font-semibold ml-3">Bookmark Manager</h1>
+    </div>
+
+    <!-- Title -->
+    <h2 id="titleH2" class=" text-xl font-semibold mb-1">Log in to your account</h2>
+    <p id="titleP" class="text-sm text-gray-500 mb-6">Welcome back! Please enter your details.</p>
+
+    <!-- Form -->
+    <form>
+
+    <label id="fullName" for="text" class=" hidden  text-sm font-medium mb-1">Full Name</label>
+      <input  type="text" id="fullNameBOX" 
+             class=" hidden w-full mb-6 border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-900" 
+             placeholder="Enter your Full Name" /> 
+
+
+      <label for="email" class="block text-sm font-medium mb-1">Email</label>
+      <input type="email" id="email" 
+             class="w-full mb-4 border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-900" 
+             placeholder="Enter your email" />
+
+            
+      <label id="password" for="password" class="block text-sm font-medium mb-1">Password</label>
+      <input  type="password" id="passwordBOX" 
+             class="w-full mb-6 border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-900" 
+             placeholder="Enter your password" />
+
+             
+
+      <button id="button" type="submit"  onclick=" loginCk(event)"
+              class="w-full bg-emerald-900 hover:bg-emerald-800 text-white py-2 rounded-md font-medium transition">
+        Log in
+      </button>
+    </form>
+
+    <!-- Links -->
+    <div class="text-center mt-4 text-sm">
+      <p id="linkReset" class="text-gray-500">
+        Forgot password? 
+        <a onclick="resetF()" href="#" class=" text-emerald-900 font-medium hover:underline">Reset it</a>
+      </p>
+
+      <p id="linkSingIn" class="hidden text-gray-500">
+        Sing in  
+        <a  onclick="singInF()" href="#" class=" text-emerald-900 font-medium hover:underline">Sing in </a>
+      </p>
+      
+      <p id="signUp" class="text-gray-500 mt-2">
+        Don’t have an account? 
+        <a onclick="signUpF()" href="#" class="text-emerald-900 font-medium hover:underline" >Sign up</a>
+      </p>
+    </div>
+  </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
